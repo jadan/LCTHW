@@ -9,7 +9,7 @@ all:
 	cc -Wall -g ex11.c -o ex11
 	cc -Wall -g ex15.c -o ex15
 	cc -Wall -g ex16.c -o ex16
-
+	cc -Wall -g ex16ec.c -o ex16ec
 clean:
 	rm -rf *dSYM
 	rm -rf ex3
@@ -22,6 +22,6 @@ clean:
 	rm -rf ex11
 	rm -rf ex15
 	rm -rf ex16
-
+	rm -rf ex16ec
 
 
