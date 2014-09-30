@@ -14,7 +14,7 @@ struct Person* Person_create(char* name, int age, int weight, int height){
 	struct Person* who = malloc(sizeof(struct Person));
 	assert(who != NULL);
 
-	who->name = name;
+	who->name = strdup(name);
 	who->age  = age;
 	who->weight = weight;
 	who->height = height;
@@ -24,7 +24,7 @@ struct Person* Person_create(char* name, int age, int weight, int height){
 
 void Person_destroy(struct Person* who){
 	assert(who!=NULL);
-	//free(who->name);
+	free(who->name);
 	free(who);
 }
 
