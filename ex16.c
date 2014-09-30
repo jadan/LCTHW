@@ -23,12 +23,12 @@ struct Person* Person_create(char* name, int age, int weight, int height){
 }
 
 void Person_destroy(struct Person* who){
-	assert(who=!NULL);
+	assert(who!=NULL);
 	free(who->name);
 	free(who);
 }
 
-void Person_print(struc Person* who){
+void Person_print(struct Person* who){
 	printf("Name: %s\n", who->name);
 	printf("\tAge: %d\n", who->age);
 	printf("\tWeight: %d\n", who->weight);
