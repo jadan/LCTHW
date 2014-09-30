@@ -27,8 +27,8 @@ int main (int argc, char *argv[])
 	printf("another: %s\n", another);
 	printf("another each: %c %c %c %c\n", another[0], another[1], another[2], another[3]);
 
-	unsigned int* x = (int*) name;
-	printf("HACK: %u %s\n", x, name);
+//	unsigned int* x = (int*) name;
+//	printf("HACK: %u %s\n", x, name);
 
 	return 0;
  }
