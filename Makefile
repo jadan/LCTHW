@@ -7,6 +7,8 @@ all:
 	cc -Wall -g ex9.c -o ex9
 	cc -Wall -g ex10.c -o ex10
 	cc -Wall -g ex11.c -o ex11
+	cc -Wall -g ex15.c -o ex15
+
 clean:
 	rm -rf ex3
 	rm -rf ex4
@@ -16,6 +18,7 @@ clean:
 	rm -rf ex9
 	rm -rf ex10
 	rm -rf ex11
+	rm -rf ex15
 
 
 
