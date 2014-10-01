@@ -157,6 +157,21 @@ void Database_list(struct Connection* conn){
 	}
 }
 
+//EC #3 Add more operations you can do on the database, like find.
+void Database_find(struct Connection* conn, char* name){
+	int i = 0;
+	struct Database* db = conn->db;
+	for(i = 0; i < MAX_ROWS; i++){
+		struct Address* curr = &db->rows[i];
+		if(curr->set && strcmp(name, curr->name) == 0){
+			printf("Found %s: ", name);
+			Address_print(curr);
+			return;
+		}
+	}
+	printf("A record for %s was not found in this database.\n", name);
+}
+
 //Database handler. UI
 int main(int argc, char* argv[]){
 	if(argc<3){
@@ -169,7 +184,7 @@ int main(int argc, char* argv[]){
 	struct Connection* conn = Database_open(filename, action);
 	int id = 0;
 
-	if(argc>3){
+	if(argc>3 && action != 'f'){
 		id = atoi(argv[3]);
 	}
 
@@ -209,6 +224,12 @@ int main(int argc, char* argv[]){
 		case 'l':
 			Database_list(conn);
 			break;
+
+		case 'f':
+			if(argc!=4)
+				die("Need name to look for.", conn);
+			Database_find(conn, argv[3]);
+			break; 
 
 		default:
 			die("Invalid action. Only c=create, g=get, s=set, d=delete and l=list are valid actions.", conn);

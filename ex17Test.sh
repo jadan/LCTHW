@@ -6,5 +6,7 @@
 ./ex17 db.dat s 4 dog dog@shaw.com
 ./ex17 db.dat g 3
 ./ex17 db.dat l
+./ex17 db.dat f frank
+./ex17 db.dat f cat
 
 
