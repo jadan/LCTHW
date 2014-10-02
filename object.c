@@ -24,7 +24,7 @@ int Object_init(void *self){
 }
 
 void *Object_move(void *self, Direction direction){
-	Object* obj = self;
+//	Object* obj = self;
 	printf("You can't go that direction.\n");
 	return NULL;
 }

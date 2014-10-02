@@ -1,5 +1,5 @@
 all:
-	cc -Wall -g ex3.c -o ex3
+	cc -Wall -g -Wall -g ex3.c -o ex3
 	cc -Wall -g ex4.c -o ex4
 	cc -Wall -g ex5.c -o ex5
 	cc -Wall -g ex6.c -o ex6
@@ -14,6 +14,7 @@ all:
 	cc -Wall -g ex18.c -o ex18
 	cc -Wall -g -c -o object.o object.c
 	cc -Wall -g ex19.c object.o -o ex19
+	cc -Wall -g ex20.c -o ex20
 
 clean:
 	rm -rf *dSYM
@@ -32,5 +33,6 @@ clean:
 	rm -rf ex18
 	rm -rf ex19
 	rm -rf object.o
+	rm -rf ex20
 
 
